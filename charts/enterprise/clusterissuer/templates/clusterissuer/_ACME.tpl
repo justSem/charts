@@ -24,7 +24,8 @@ spec:
     solvers:
     {{- if eq .type "HTTP01" }}
     - http01:
-        ingress:
+        ingress: 
+          ingressClassName: {{ .http01IngressClassName }}
     {{- else }}
     - dns01:
       {{- if eq .type "cloudflare" }}
