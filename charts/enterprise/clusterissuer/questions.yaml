@@ -195,6 +195,14 @@ questions:
                         type: string
                         required: true
                         default: ""
+                    - variable: http01Solver
+                      label: HTTP01 Solver IngressClass
+                      description: "IngressClassName for HTTP01 solver"
+                      schema:
+                        show_if: [["type", "=", "http01"]]
+                        type: string
+                        required: true
+                        default: ""
 
         - variable: CA
           label: Certificate Authority Issuer
